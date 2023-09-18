@@ -1,5 +1,9 @@
-#### HERMIT MD WHATSAPP BOT
-Hermit-md - Simple whatsapp Multi Device whatsapp bot.
+  <p align="center">  
+  <a>
+    <img  height="450" src="https://i.ibb.co/dB8cCSY/Neon-Blue-and-Black-Gamer-Badge-Logo.png">
+    <h1 align="center">HERMIT-MD_V2</h1>
+  </a>
+  </p>
 
 ***
 
