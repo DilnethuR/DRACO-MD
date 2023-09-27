@@ -41,16 +41,17 @@ Function({
 			commandslist[command.type].push((match.length >= 3 ? (HANDLER + mmatch) : command.pattern).trim())
 		}
 	})
-	let msg = `╭━━━〔 ${BOT_INFO.split(";")[0]} ⁩〕━━━┈⊷
+	let msg = `╭━━━❙📃 𝔻𝕀𝕃ℕ𝔼𝕋ℍ𝕌-𝕄𝔻 ℂ𝕆𝕄𝕄𝔸ℕ𝔻 𝕃𝕀𝕊𝕋 📃⁩❙━━━┈⊷
 ┃✵╭──────────────
-┃✵│ Owner : ${BOT_INFO.split(";")[1]}
-┃✵│ User : ${m.pushName.replace( /[\r\n]+/gm, "" )}
-┃✵│ Plugins : ${commands.length}
-┃✵│ Runtime : ${runtime(process.uptime())}
-┃✵│ Mode : ${MODE}
-┃✵│ Platform : ${os.platform()}
-┃✵│ Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-┃✵│ Version : ${VERSION}
+│ │ 👤 User:- ${citel.pushName}
+│ │ 🤖Prefix:- [ ${prefix} ]
+│ │ 👥Owner:- ${Config.ownername}
+│ │ 🫥 Plugins:- ${commands.length}
+│ │ 👁 Users:- ${total}
+│ │ ‼ Uptime:- ${runtime(process.uptime())}
+│ │ ✔ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+│ │ 🕐 Time:- ${time}
+│ │ 📆 Date:- ${date}
 ┃✵╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 `
@@ -58,7 +59,7 @@ Function({
 		msg += `╭─────────────┈⊷
 `
 		msg += `│ 「 *${await Fancy(command.toUpperCase(), 32)}* 」 `
-		msg += `╰┬────────────┈⊷\n┌┤\n`
+		msg += `────────┈⊷\n┌┤\n`
 		for (const plugin of commandslist[command])
 			msg += `││◦➛ ${await Fancy(plugin.toLowerCase(), 32)}\n`
 		msg += `│╰────────────┈⊷
@@ -67,9 +68,9 @@ Function({
 `
 	}
 	await message.send(msg);
-	/* var img = await parsedUrl(BOT_INFO)
+	/ var img = await parsedUrl(BOT_INFO)
 	if (img.length == 0) {
-		img = ['https://i.imgur.com/qJUBCYm.jpeg']
+		img = ['https://i.ibb.co/YpJzvQw/DILNETHU-MD.png']
 	}
 	const image = img[Math.floor(Math.random() * img.length)]
 	const type = image.endsWith('mp4') ? 'video' : 'image'
@@ -77,10 +78,9 @@ Function({
 		[type]: { url: image },
 		caption: `${msg}`,
 		footer: `${BOT_INFO.split(";")[0] || ' '}`,
-		buttons: [{buttonId: prefix + 'ping', buttonText: { displayText: 'Speed Test' }, type: 1},{ buttonId: prefix + 'list', buttonText: { displayText: 'List Commands' }, type: 1}]
-	}
+		
 	await message.client.sendMessage(message.chat, buttonMessage)
-	*/
+	/
 	
 });
 
